@@ -1,0 +1,57 @@
+* {
+    font-family: 'Lucida Sans Unicode', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+.title {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px;
+}
+.counteiner{
+    width: 1020px; 
+    height: 100%; 
+    margin: 0 auto;
+    background: #33CCCC;
+    position: relative;
+    border: 2px solid gray;
+}
+.profile {
+    height: 150px;
+}
+main {
+    margin-left: 20px;
+}
+.my-img {
+    position: absolute;
+    left: 200px;
+    top: 20px;
+}
+.about-me{
+    font-size: 32px;
+    position: absolute;
+    left: 320px;
+    top: 10px;
+}
+.contact {
+    font-size: 16px;
+    position: absolute;
+    left: 319px;
+    top: 60px;
+    border: 0;  
+}
+.links {
+    margin-left: 12px;
+}
+.links td{
+    border: 2px solid #009999;
+    background:  #5CCCCC; 
+} 
+.footer {
+    margin-bottom: 10px;
+}

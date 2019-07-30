@@ -17,9 +17,7 @@ a:hover{
     width: 1020px; 
     height: 100%; 
     margin: 0 auto;
-    background: #33CCCC;
     position: relative;
-    border: 2px solid gray;
 }
 .profile {
     height: 150px;
@@ -50,7 +48,6 @@ main {
 }
 .links td{
     border: 2px solid #009999;
-    background:  #5CCCCC; 
 } 
 .footer {
     margin-bottom: 10px;

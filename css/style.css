@@ -1,0 +1,252 @@
+/*** Fonts ***/
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700i&display=swap);
+
+/*** General Settings ***/
+body {
+    display: flex;
+    justify-content: center;
+    font-family: Roboto;
+    color: #61DAFB;
+    background: #20232A;
+}
+.background {
+    margin: 5vh 0;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    background: #282C34;
+}
+header, main, footer {
+    margin: 0 10vw;
+}
+.link {
+    height: 3vh;
+    font-size: 1.8vh;
+    font-style: italic;
+    padding: 0 20px;
+    transition: ease-in-out 0.1s;
+}
+.link:hover {
+    color: white;
+}
+a {
+    color: #61DAFB;
+}
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.title {
+    font-size: 10vh;
+}
+.subtitle {
+    font-size: 3vh;
+    margin: 50px 0 30px 0;
+    font-weight: 500;
+}
+.main_text {
+    font-size: 2vh;
+}
+span {
+    color: #01939A;
+    font-weight: 550;
+}
+
+/*********************************/
+/*** Header***/
+header {
+    text-align: center;
+}
+/* Header Logo */
+.header--logo img {
+    height: 20vh;
+    width: auto;
+    margin: 5vh;
+    border-radius: 6%;
+    border: 1px solid black;
+    transition: ease-in-out 0.3s;
+}
+.header--name p:first-child {
+    font-size: 5vh;
+}
+.header--name p:last-child {
+    font-size: 3vh;
+    margin: 10px;
+}
+/*** Main ***/
+/* About */
+.about {
+    margin: 20px 0;
+    text-align: center;
+}
+/* Contact */
+.contact {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+/* Social */
+.social {
+    margin: 20px 0;
+}
+.social div {
+    border: 1px solid #61DAFB;
+}
+.social div:first-child {
+    border-radius: 5px 0 0 5px;
+}
+.social div:last-child {
+    border-radius: 0 5px 5px 0;
+}
+.social div svg {
+    height: 5vh;
+    width: 5vw;
+    padding: 5px 10px;
+}
+/* Skills */
+.skills_container {
+    flex-direction: column;
+}
+.skills {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 10px;
+}
+/* Tools */
+.tools {
+    margin: 30px 0;
+}
+.tools--element {
+    display: grid;
+    grid-template-columns: 30vh 30vh;
+    grid-template-rows: 3.5vh;
+    justify-content: center;
+}
+.tools--element div {
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    align-items: center;
+    border: 1px solid #61DAFB;
+    background: #20232A;
+}
+.tools--element div:nth-child(1) {
+    font-weight: 550;
+}
+/* Education */
+.education {
+    margin: 20px 0;
+}
+/* Additional Education */
+.additional_education {
+    margin: 20px 0;
+}
+.courses > div {
+    height: 30px;
+    width: calc(100%-40px);
+    border: 1px solid #61DAFB;
+    cursor: pointer;
+    transition: ease-in-out 0.5s;
+}
+.courses div:nth-child(1) {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 5px 20px;
+    background: #20232A;
+}
+.courses--item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between !important;
+}
+.courses--link {
+    display: none;
+    align-items: center;
+    justify-content: space-around;
+    font-style: italic;
+    padding: 5px 20px;
+    transition: ease-in-out 0.5s;
+}
+.courses--link a:hover {
+    color: white;
+}
+/* Footer */
+footer .button {
+    height: 48px;
+    width: 20vw;
+    margin: 50px 0 40px 0;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    background: #61DAFB;
+    border: 1px solid #61DAFB;
+    /* transition: ease-in-out 0.3s; */
+}
+footer .button a {
+    color: #282C34;
+}
+footer .button:hover { 
+    background: white;
+    transition: ease-in-out 0.3s;
+}
+/*********************************/
+
+/* PC */
+@media (orientation: landscape) {
+    .header--logo img:hover {
+        height: 70vh;
+        transition: ease-in-out 0.3s;
+    }
+    .contact div:hover, .contact div:hover a {
+        color: white;
+    }
+    .social div:hover {
+        background: #61DAFB;
+        transition: ease-in-out 0.2s;
+    }
+    .social div:hover svg {
+        color: white;
+        transition: ease-in-out 0.2s;
+    }
+}
+/* Mobile */
+@media (orientation: portrait) {
+    header, main, footer, .background {
+        width: 100vw;
+        margin: 0;
+    }
+    .social {
+        margin: 2vh;
+    }
+    .social div {
+        border: 1px solid #61DAFB;
+    }
+    .social div:first-child {
+        border-radius: 5px 0 0 5px;
+    }
+    .social div:last-child {
+        border-radius: 0 5px 5px 0;
+    }
+    .social div svg {
+        height: 6vh;
+        width: 12vw;
+        padding: 5px 8px;
+    }
+
+    .skills {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin: 10px 0;
+    }
+
+    /* Footer */
+    footer .button {
+        width: 100vw;
+    }
+}

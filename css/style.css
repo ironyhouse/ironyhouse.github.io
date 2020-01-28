@@ -142,12 +142,14 @@ header {
 .additional_education {
     margin: 20px 0;
 }
+.courses {
+    transform: all ease-in-out 0.3s;
+}
 .courses > div {
     height: 30px;
     width: calc(100%-40px);
     border: 1px solid #61DAFB;
     cursor: pointer;
-    transition: ease-in-out 0.5s;
 }
 .courses div:nth-child(1) {
     display: flex;
@@ -161,13 +163,25 @@ header {
     align-items: center;
     justify-content: space-between !important;
 }
+.svg-icon {
+    transition: ease-in-out 0.3s;
+}
 .courses--link {
     display: none;
     align-items: center;
     justify-content: space-around;
     font-style: italic;
     padding: 5px 20px;
-    transition: ease-in-out 0.5s;
+    animation: showBlock 0.3s linear forwards;
+}
+@keyframes showBlock {
+    0% {
+        opacity: 0;
+        height: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 .courses--link a:hover {
     color: white;
@@ -236,7 +250,6 @@ footer .button:hover {
         width: 12vw;
         padding: 5px 8px;
     }
-
     .skills {
         display: flex;
         align-items: center;
@@ -244,9 +257,30 @@ footer .button:hover {
         flex-direction: column;
         margin: 10px 0;
     }
-
     /* Footer */
     footer .button {
         width: 100vw;
     }
+}
+
+.arrow_up {
+    height: 7vh;
+    width: 7vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 10vh;
+    right: 10vw;
+    background: #61DAFB;
+    border-radius: 50%;
+}
+.arrow_up:hover {
+    background: white;
+    transition: ease-in-out 0.2s;
+}
+.arrow_up svg {
+    height: 5vh;
+    width: 5vh;
+    color: #20232A;  
 }

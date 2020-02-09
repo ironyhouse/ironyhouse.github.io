@@ -169,6 +169,7 @@ header {
 }
 .svg-icon {
     height: 3vh;
+    width: 3vh;
     transition: ease-in-out 0.3s;
 }
 .courses--link {
@@ -264,6 +265,7 @@ footer .button:hover {
         display: flex;
         justify-content: center;
         flex-direction: column !important;
+        margin: 30px 0;
     }
     .contact > div {
         margin: 10px auto;

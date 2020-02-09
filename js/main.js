@@ -1,53 +1,28 @@
-/* Drop Button */
-// function showElement() {
-//     if (document.querySelector(`.courses--link`).style.display = 'none') {
-//         return document.querySelector(`.courses--link`).style.display = 'flex';
+/* Up Button */
+window.onload = function(){
+	//window.scrollTo(x,y)
+	var scrolled;
+	var timer;
 
-//     } else if (document.querySelector(`.courses--link`).style.display = 'flex') {
-//         return document.querySelector(`.courses--link`).style.display = 'none';
-//     }
-// }
+	document.getElementById('up').onclick = function(){
+		scrolled = window.pageYOffset;
+		//window.scrollTo(0,0);
+		scrollToTop();
+	}
+	function scrollToTop(){
+		if (scrolled > 0) {
+			window.scrollTo(0, scrolled);
+			scrolled = scrolled - 300; //100 - скорость прокрутки
+			timer = setTimeout(scrollToTop, 50);
+		}
+		else {
+			clearTimeout(timer);
+			window.scrollTo(0,0);
+		}
+	}
+}
 
-
-// function showElement() {
-//     if (document.querySelector(`.courses--link`).style.display = 'none') {
-//         return document.querySelector(`.courses--link`).style.display = 'flex';
-//     }
-// }
-// function showElement() {
-//     if (document.querySelector(`.courses--link`).style.display = 'flex') {
-//         return document.querySelector(`.courses--link`).style.display = 'none';
-//     }
-// }
-
-//     let show = document.querySelector(`.courses--link`).style.display;
-// function showElement() {
-//     if (show = 'none') {
-//         document.querySelector(`.courses--link`).style.display = 'flex';
-
-//     } else if ( show = 'flex') {
-//         document.querySelector(`.courses--link`).style.display = 'none';
-//     }
-// }
-
-
-// (function($D){
-//     var $button    = $D.querySelector('.courses--item'),
-//         $container = $D.querySelector('.courses--link');
-  
-//     $button.addEventListener('click', function(e) {
-//           isVisible = $container.style.display == 'flex';
-//       $container.style.display = isVisible ? 'none' : 'flex';
-//     });
-// })(document);
-
-function showElement(id) {
-    // document.getElementById('1').lastChild.style.display = 'none';
-    // alert(document.getElementById(`${id}`).getElementsByClassName('courses--link'));
-    // alert(document.getElementById('1').querySelector('.courses--link').display);
-    // alert(x);
-    // let id = x;
-    
+function showElement(id) {    
     if (   document.getElementById(`${id}`).querySelector('.courses--link').style.display == '' 
         || document.getElementById(`${id}`).querySelector('.courses--link').style.display== 'none') {
         document.getElementById(`${id}`).querySelector('.courses--link').style.display = 'flex';

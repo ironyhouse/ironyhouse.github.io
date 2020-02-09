@@ -150,7 +150,7 @@ header {
     transform: all ease-in-out 0.3s;
 }
 .courses > div {
-    height: 60px;
+    height: 5vh;
     width: calc(100%-40px);
     border: 1px solid #61DAFB;
     cursor: pointer;
@@ -168,6 +168,7 @@ header {
     justify-content: space-between !important;
 }
 .svg-icon {
+    height: 3vh;
     transition: ease-in-out 0.3s;
 }
 .courses--link {

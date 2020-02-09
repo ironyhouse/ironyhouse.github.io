@@ -7,12 +7,16 @@ body {
     justify-content: center;
     font-family: Roboto;
     color: #61DAFB;
-    background: #20232A;
+    background: url(../img/bg.jpg);
+    background-size: cover;
+    /* background-position-x: %; */
+    /* background: #20232A; */
 }
 .background {
     margin: 5vh 0;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
     background: #282C34;
+    opacity: 0.98;
 }
 header, main, footer {
     margin: 0 10vw;
@@ -42,6 +46,7 @@ a {
     font-size: 3vh;
     margin: 50px 0 30px 0;
     font-weight: 500;
+    text-align: center;
 }
 .main_text {
     font-size: 2vh;
@@ -119,7 +124,7 @@ header {
 }
 .tools--element {
     display: grid;
-    grid-template-columns: 30vh 30vh;
+    grid-template-columns: minmax(30px, 30vh) minmax(30px, 30vh);
     grid-template-rows: 3.5vh;
     justify-content: center;
 }
@@ -129,7 +134,6 @@ header {
     padding: 0 20px;
     align-items: center;
     border: 1px solid #61DAFB;
-    background: #20232A;
 }
 .tools--element div:nth-child(1) {
     font-weight: 550;
@@ -146,16 +150,16 @@ header {
     transform: all ease-in-out 0.3s;
 }
 .courses > div {
-    height: 30px;
+    height: 60px;
     width: calc(100%-40px);
     border: 1px solid #61DAFB;
     cursor: pointer;
+    padding: 0 20px;
 }
 .courses div:nth-child(1) {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    padding: 5px 20px;
     background: #20232A;
 }
 .courses--item {
@@ -188,7 +192,7 @@ header {
 }
 /* Footer */
 footer .button {
-    height: 48px;
+    height: 56px;
     width: 20vw;
     margin: 50px 0 40px 0;
     font-size: 18px;
@@ -207,8 +211,30 @@ footer .button:hover {
     background: white;
     transition: ease-in-out 0.3s;
 }
+/* Arrow Up */
+.arrow_up {
+    height: 7vh;
+    width: 7vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 5vh;
+    right: 5vw;
+    background: #61DAFB;
+    border-radius: 50%;
+    border: 1px solid #282C34;
+}
+.arrow_up:hover {
+    background: white;
+    transition: ease-in-out 0.2s;
+}
+.arrow_up svg {
+    height: 5vh;
+    width: 5vh;
+    color: #20232A;
+}
 /*********************************/
-
 /* PC */
 @media (orientation: landscape) {
     .header--logo img:hover {
@@ -233,6 +259,9 @@ footer .button:hover {
         width: 100vw;
         margin: 0;
     }
+    .background {
+        opacity: 0.9;
+    }
     .social {
         margin: 2vh;
     }
@@ -252,35 +281,13 @@ footer .button:hover {
     }
     .skills {
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         justify-content: center;
         flex-direction: column;
-        margin: 10px 0;
+        margin: 10px 50px;
     }
     /* Footer */
     footer .button {
-        width: 100vw;
+        width: 50vw;
     }
-}
-
-.arrow_up {
-    height: 7vh;
-    width: 7vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    bottom: 10vh;
-    right: 10vw;
-    background: #61DAFB;
-    border-radius: 50%;
-}
-.arrow_up:hover {
-    background: white;
-    transition: ease-in-out 0.2s;
-}
-.arrow_up svg {
-    height: 5vh;
-    width: 5vh;
-    color: #20232A;
 }

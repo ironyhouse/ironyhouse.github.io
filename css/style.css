@@ -260,6 +260,14 @@ footer .button:hover {
         width: 100vw;
         margin: 0;
     }
+    /* .contact {
+        display: flex;
+        justify-content: center;
+        flex-direction: column !important;
+    }
+    .contact > div {
+        margin: 10px auto;
+    } */
     .background {
         opacity: 0.9;
     }

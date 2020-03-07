@@ -7,7 +7,7 @@ body {
     justify-content: center;
     font-family: Roboto;
     color: #61DAFB;
-    background: url(../img/bg.jpg);
+    background: url(../img/bg1.jpg);
     background-size: cover;
     /* background-position-x: %; */
     /* background: #20232A; */
@@ -87,8 +87,11 @@ header {
 .contact {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     margin: 20px 0;
+}
+.contact > div {
+    margin: auto 1vw;
 }
 /* Social */
 .social {
@@ -110,13 +113,31 @@ header {
 }
 /* Skills */
 .skills_container {
-    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .skills {
+    min-width: 20vw;
     display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    margin: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 30px 50px;
+}
+.skills--element {
+    height: 4vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    border: 1px solid #61DAFB;
+}
+.skills > div:first-child {
+    /* color: #3B51D7; */
+    font-size: 2.2vh;
+    justify-content: center;
+    font-weight: bold;
 }
 /* Tools */
 .tools {
@@ -125,14 +146,13 @@ header {
 .tools--element {
     display: grid;
     grid-template-columns: minmax(30px, 30vh) minmax(30px, 30vh);
-    grid-template-rows: 3.5vh;
+    grid-template-rows: 4vh;
     justify-content: center;
 }
 .tools--element div {
     display: flex;
     align-items: center;
     padding: 0 20px;
-    align-items: center;
     border: 1px solid #61DAFB;
 }
 .tools--element div:nth-child(1) {
@@ -146,26 +166,24 @@ header {
 .additional_education {
     margin: 20px 0;
 }
-.courses {
-    transform: all ease-in-out 0.3s;
-}
 .courses > div {
-    height: 5vh;
     width: calc(100%-40px);
     border: 1px solid #61DAFB;
     cursor: pointer;
     padding: 0 20px;
 }
-.courses div:nth-child(1) {
+/* .courses > div:nth-child(1) {
     display: flex;
     align-items: center;
     justify-content: flex-start;
     background: #20232A;
-}
+} */
 .courses--item {
+    height: 5vh;
     display: flex;
     align-items: center;
-    justify-content: space-between !important;
+    background: #20232A;
+    justify-content: space-between;
 }
 .svg-icon {
     height: 3vh;
@@ -173,6 +191,7 @@ header {
     transition: ease-in-out 0.3s;
 }
 .courses--link {
+    min-height: 5vh;
     display: none;
     align-items: center;
     justify-content: space-around;
@@ -180,13 +199,22 @@ header {
     padding: 5px 20px;
     animation: showBlock 0.3s linear forwards;
 }
+.courses--img img{
+    height: 10vw;
+    max-width: auto;
+    margin: 10px;
+    animation: showBlock 0.3s linear forwards;
+}
 @keyframes showBlock {
     0% {
         opacity: 0;
         height: 0;
+        min-height: 0vh;
     }
     100% {
         opacity: 1;
+        height: 100;
+        min-height: 5vh;
     }
 }
 .courses--link a:hover {
@@ -225,7 +253,6 @@ footer .button:hover {
     right: 5vw;
     background: #61DAFB;
     border-radius: 50%;
-    border: 1px solid #282C34;
 }
 .arrow_up:hover {
     background: white;
@@ -261,7 +288,7 @@ footer .button:hover {
         width: 100vw;
         margin: 0;
     }
-    /* .contact {
+    .contact {
         display: flex;
         justify-content: center;
         flex-direction: column !important;
@@ -269,7 +296,7 @@ footer .button:hover {
     }
     .contact > div {
         margin: 10px auto;
-    } */
+    }
     .background {
         opacity: 0.9;
     }
@@ -290,12 +317,11 @@ footer .button:hover {
         width: 12vw;
         padding: 5px 8px;
     }
-    .skills {
-        display: flex;
-        align-items: flex-start;
-        justify-content: center;
+    .skills_container {
         flex-direction: column;
-        margin: 10px 50px;
+    }
+    .skills--element {
+        width: 70vw;
     }
     /* Footer */
     footer .button {

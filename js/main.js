@@ -23,12 +23,12 @@ window.onload = function(){
 }
 
 function showElement(id) {    
-    if (   document.getElementById(`${id}`).querySelector('.courses--link').style.display == '' 
-        || document.getElementById(`${id}`).querySelector('.courses--link').style.display== 'none') {
-        document.getElementById(`${id}`).querySelector('.courses--link').style.display = 'flex';
+    if (   document.getElementById(`${id}`).nextElementSibling.style.display == '' 
+        || document.getElementById(`${id}`).nextElementSibling.style.display== 'none') {
+        document.getElementById(`${id}`).nextElementSibling.style.display = 'flex';
         document.getElementById(`${id}`).querySelector('.svg-icon').style.transform = 'rotate(180deg)';
-    } else if ( document.getElementById(`${id}`).querySelector('.courses--link').style.display = 'flex') {
-        document.getElementById(`${id}`).querySelector('.courses--link').style.display = 'none';
+    } else if ( document.getElementById(`${id}`).nextElementSibling.style.display = 'flex') {
+        document.getElementById(`${id}`).nextElementSibling.style.display = 'none';
         document.getElementById(`${id}`).querySelector('.svg-icon').style.transform = 'rotate(0deg)';
     }
 }

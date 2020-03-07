@@ -327,4 +327,26 @@ footer .button:hover {
     footer .button {
         width: 50vw;
     }
+
+    .arrow_up {
+        height: 5vh;
+        width: 5vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        bottom: 5vh;
+        right: 2vw;
+        background: #61DAFB;
+        border-radius: 50%;
+    }
+    .arrow_up:hover {
+        background: white;
+        transition: ease-in-out 0.2s;
+    }
+    .arrow_up svg {
+        height: 4vh;
+        width: 3vh;
+        color: #20232A;
+    }
 }

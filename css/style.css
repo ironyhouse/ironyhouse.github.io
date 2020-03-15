@@ -70,10 +70,11 @@ header {
     border: 1px solid black;
     transition: ease-in-out 0.3s;
 }
-.header--name p:first-child {
+.header--name h1 {
     font-size: 5vh;
+    font-weight: 500;
 }
-.header--name p:last-child {
+.header--name p {
     font-size: 3vh;
     margin: 10px;
 }

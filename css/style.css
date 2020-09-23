@@ -65,7 +65,7 @@ span {
     color: #01939A;
     font-weight: 550;
 }
-.text_hover:hover {
+.text_hover:hover, .text_check {
     color: white !important;
     background: #61DAFB;
     cursor: pointer;
@@ -151,7 +151,7 @@ header {
     top: 0;
     right: 0;
 
-    animation: flyMe 6s linear infinite;
+    animation: flyMeHorizontal 2s linear infinite, flyMeVertical 2s linear infinite;
 
     height: 40vh;
     width: 60vw;
@@ -285,8 +285,40 @@ header {
         transform: scale(0.8)
     }
 }
-@keyframes flyMe {
+@keyframes flyMeHorizontal {
     0% {
+        transform: translate(0, 0px);
+    }
+    25% {
+        transform: translate(1vh, 2vh);
+    }
+    50% {
+        transform: translateX(0, 0vh);
+    }
+    75% {
+        transform: translateX(-1vh, -2vh);
+    }
+    100% {
+        transform: translateX(0, 0);
+    }
+}
+@keyframes flyMeVertical {
+    0% {
+        /* transform: translateY(0px); */
+    }
+    25% {
+        /* transform: translateY(12.5px); */
+    }
+    50% {
+        /* transform: translateY(0px); */
+    }
+    75% {
+        /* transform: translateY(-12.5px); */
+    }
+    100% {
+        /* transform: translateY(0px); */
+    }
+    /* 0% {
         transform: translate(0, 0px);
     }
     5% {
@@ -348,7 +380,7 @@ header {
     }
     100% {
         transform: translate(0, 0px);
-    }
+    } */
 }
 /* Header Name */
 .header--name {
@@ -471,6 +503,7 @@ header {
 }
 /* Portfolio Container*/
 .portfolio_container {
+    min-height: 40vw;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -478,9 +511,6 @@ header {
     grid-gap: 2vh;
 }
 .portfolio_items {
-    border: 1px solid #61DAFB;
-    border-radius: 5px;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -499,16 +529,15 @@ header {
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100% 100%;
+
+    border: 1px solid #61DAFB;
+    border-radius: 5px;
 }
-
-
 .portfolio_items:hover {
     transition: 0.4s ease-out;
     transform: matrix3d(1, 0, 0, var(--x-translate), 0, 1, 0, 
                         var(--y-translate), 0, 0, 1, 0, 0, 0, 0, 1);
 }
-
-
 .portfolio_container--item_1 {
     background-image: url(../img/2.png);
 }

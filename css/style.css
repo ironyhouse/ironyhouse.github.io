@@ -151,7 +151,7 @@ header {
     top: 0;
     right: 0;
 
-    animation: flyMeHorizontal 2s linear infinite, flyMeVertical 2s linear infinite;
+    animation: flyMeVertical 6s linear infinite;
 
     height: 40vh;
     width: 60vw;
@@ -285,7 +285,7 @@ header {
         transform: scale(0.8)
     }
 }
-@keyframes flyMeHorizontal {
+/* @keyframes flyMeHorizontal {
     0% {
         transform: translate(0, 0px);
     }
@@ -301,24 +301,24 @@ header {
     100% {
         transform: translateX(0, 0);
     }
-}
+} */
 @keyframes flyMeVertical {
-    0% {
-        /* transform: translateY(0px); */
+    /* 0% {
+        transform: translateY(0px);
     }
     25% {
-        /* transform: translateY(12.5px); */
+        transform: translateY(12.5px);
     }
     50% {
-        /* transform: translateY(0px); */
+        transform: translateY(0px);
     }
     75% {
-        /* transform: translateY(-12.5px); */
+        transform: translateY(-12.5px);
     }
     100% {
-        /* transform: translateY(0px); */
-    }
-    /* 0% {
+        transform: translateY(0px);
+    } */
+    0% {
         transform: translate(0, 0px);
     }
     5% {
@@ -380,7 +380,7 @@ header {
     }
     100% {
         transform: translate(0, 0px);
-    } */
+    }
 }
 /* Header Name */
 .header--name {

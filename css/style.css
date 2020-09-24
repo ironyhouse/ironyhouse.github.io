@@ -499,6 +499,17 @@ header {
     background-size: 100% 100%;
 
     border-radius: 5px;
+
+    animation: showElement 1s linear forwards;
+}
+
+@keyframes showElement {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 .portfolio_items:hover {
     transition: 0.4s ease-out;

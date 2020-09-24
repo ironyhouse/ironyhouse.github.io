@@ -64,6 +64,8 @@ function showPortfolioElements(classElement) {
 	}
 	for (let i = 0; i < document.getElementsByClassName(classElement).length; i++) {
 		document.getElementsByClassName(classElement)[i].style.display = 'flex';
+		// document.getElementsByClassName(classElement)[i].style.animation = 'none';
+		// document.getElementsByClassName(classElement)[i].style.animation = 'showElement 1s linear forwards';
 	}
 }
 

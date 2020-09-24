@@ -498,7 +498,6 @@ header {
     background-position: center;
     background-size: 100% 100%;
 
-    border: 1px solid #61DAFB;
     border-radius: 5px;
 }
 .portfolio_items:hover {
@@ -507,24 +506,27 @@ header {
                         var(--y-translate), 0, 0, 1, 0, 0, 0, 0, 1);
 }
 .portfolio_container--item_1 {
-    background-image: url(../img/2.png);
+    background-image: url(../img/Portfolio_1.png);
 }
 .portfolio_container--item_2 {
-    background-image: url(../img/3.png);
+    background-image: url(../img/Portfolio_2.png);
 }
 .portfolio_container--item_3 {
-    background-image: url(../img/1.png);
+    background-image: url(../img/Portfolio_3.png);
 }
 .portfolio_container--item_4 {
-    background-image: url(../img/123.jpg);
+    background-image: url(../img/Portfolio_4.png);
 }
 .portfolio_container--item_5 {
-    background-image: url(../img/2.png);
+    background-image: url(../img/Portfolio_5.png);
 }
 .portfolio_container--item_6 {
-    background-image: url(../img/2.png);
+    background-image: url(../img/Portfolio_6.png);
 }
-
+.portfolio_items a {
+    height: 100%;
+    width: 100%;
+}
 
 
 
@@ -643,6 +645,9 @@ footer .button:hover {
 /*********************************/
 /* Mobile */
 @media (orientation: portrait) {
+    .subtitle {
+        margin: 100px 0 30px 0;
+    }
     .header_logo {
         width: 80vw;
     }
@@ -733,10 +738,13 @@ footer .button:hover {
         flex-direction: column;
     }
     .skills--element {
-        width: 70vw;
+        width: 75vw;
     }
     .tools {
         margin: 30px 2vw;
+    }
+    .tools--element {
+        grid-template-rows: minmax(4vh, 5vh);
     }
     .portfolio_check {
         margin-bottom: 0px;
@@ -753,6 +761,9 @@ footer .button:hover {
         height: 40vw;
 
         margin-top: 8vw;
+    }
+    .education div {
+        text-align: center;
     }
     .courses > div {
         margin: 0 2vw;
@@ -821,7 +832,7 @@ footer .button:hover {
 
 
 .experience_container {
-   width: 80vw;
+   width: 60vw;
    padding: 50px 0;
    margin: 50px auto;
    position: relative;
@@ -870,18 +881,18 @@ footer .button:hover {
    border-radius: 50%;
    border: 2px solid #F5F7FA;
    background: #4FC1E9;
-   margin-top: 10px;
+   margin-top: 35px;
    z-index: 9999
 }
 
 .timeline-content {
    width: 95%;
-   padding: 0 15px;
+   padding: 0 30px;
    color: #666
 }
 
 .timeline-content h3 {
-   margin-top: 5px;
+   margin-top: 20px;
    margin-bottom: 10px;
    font-size: 3vh;
    font-weight: 500;
@@ -903,6 +914,9 @@ footer .button:hover {
 }
 
 @media (orientation: portrait) {
+    .experience_container {
+        width: 80vw;
+    }
    .experience_container:before {
       left: 8px;
       width: 2px;

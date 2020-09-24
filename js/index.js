@@ -11,7 +11,7 @@ for (let i = 0; i <= 40; i++) {						// arrLength
 
 
 
-// Up Button
+// Arrow Up
 window.onload = function(){
 	//window.scrollTo(x,y)
 	var scrolled;
@@ -25,8 +25,8 @@ window.onload = function(){
 	function scrollToTop(){
 		if (scrolled > 0) {
 			window.scrollTo(0, scrolled);
-			scrolled = scrolled - 300; //100 - скорость прокрутки
-			timer = setTimeout(scrollToTop, 50);
+			scrolled = scrolled - 100; //100 - скорость прокрутки
+			timer = setTimeout(scrollToTop, 10);
 		}
 		else {
 			clearTimeout(timer);

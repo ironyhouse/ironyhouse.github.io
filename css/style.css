@@ -151,7 +151,7 @@ header {
     top: 0;
     right: 0;
 
-    animation: flyMeVertical 6s linear infinite;
+    animation: flyMeVertical 5s linear infinite;
 
     height: 40vh;
     width: 60vw;
@@ -208,7 +208,7 @@ header {
     0% {
         visibility: visible;
         top: 50%;
-        left: 25%;
+        left: 28%;
         z-index: 6;
         transform: scale(0.8)
     }
@@ -226,7 +226,7 @@ header {
     }
     100% {
         top: 50%;
-        left: 25%;
+        left: 28%;
         z-index: -1;
         transform: scale(0.8)
     }
@@ -285,39 +285,7 @@ header {
         transform: scale(0.8)
     }
 }
-/* @keyframes flyMeHorizontal {
-    0% {
-        transform: translate(0, 0px);
-    }
-    25% {
-        transform: translate(1vh, 2vh);
-    }
-    50% {
-        transform: translateX(0, 0vh);
-    }
-    75% {
-        transform: translateX(-1vh, -2vh);
-    }
-    100% {
-        transform: translateX(0, 0);
-    }
-} */
 @keyframes flyMeVertical {
-    /* 0% {
-        transform: translateY(0px);
-    }
-    25% {
-        transform: translateY(12.5px);
-    }
-    50% {
-        transform: translateY(0px);
-    }
-    75% {
-        transform: translateY(-12.5px);
-    }
-    100% {
-        transform: translateY(0px);
-    } */
     0% {
         transform: translate(0, 0px);
     }
@@ -770,6 +738,9 @@ footer .button:hover {
     .tools {
         margin: 30px 2vw;
     }
+    .portfolio_check {
+        margin-bottom: 0px;
+    }
     .portfolio_container {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -781,7 +752,7 @@ footer .button:hover {
         width: 40vw;
         height: 40vw;
 
-        margin-top: 4vw;
+        margin-top: 8vw;
     }
     .courses > div {
         margin: 0 2vw;
@@ -850,7 +821,7 @@ footer .button:hover {
 
 
 .experience_container {
-   width: 60vw;
+   width: 80vw;
    padding: 50px 0;
    margin: 50px auto;
    position: relative;
@@ -911,24 +882,27 @@ footer .button:hover {
 
 .timeline-content h3 {
    margin-top: 5px;
-   margin-bottom: 5px;
-   font-size: 25px;
-   font-weight: 500
+   margin-bottom: 10px;
+   font-size: 3vh;
+   font-weight: 500;
+   color: #61DAFB;
 }
 
 .timeline-content span {
-   font-size: 15px;
-   color: #a4a4a4;
+   font-size: 2vh;
+   margin-bottom: 5px;
+   color: #01939A;
 }
 
 .timeline-content p {
-   font-size: 14px;
+   margin-top: 5px;
+   font-size: 1.8vh;
    line-height: 1.5em;
    word-spacing: 1px;
    color: #888;
 }
 
-@media screen and (max-width: 768px) {
+@media (orientation: portrait) {
    .experience_container:before {
       left: 8px;
       width: 2px;
